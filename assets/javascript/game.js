@@ -26,7 +26,6 @@ $(document).ready(function () {
             colCrystal += parseInt(crystalVal);
             $("#crystalsCollected").text(colCrystal);
             $("#crystalsCollected").prepend("&nbsp;")
-            // endRound(checkAnswer());
             checkAnswer();
         });
 
@@ -35,45 +34,25 @@ $(document).ready(function () {
                 winCounter++;
                 $("#winCount").text(winCounter);
                 isWin = true;
-                setTimeout(function(){
+                setTimeout(function () {
                     alert("noice");
                     newRound();
-                },0)
-
+                }, 0)
                 return true;
             }
             else if (reqCrystal < colCrystal) {
                 lossCounter++;
                 $("#lossCount").text(lossCounter);
                 isWin = false;
-                setTimeout(function(){
+                setTimeout(function () {
                     alert("yikes");
                     newRound();
-                },0)
-            
-                
+                }, 0)
                 return true;
-            } 
-           
+            }
             return false;
         }
-
-        // function endRound(isOver){
-        //     if (isWin && isOver) {
-        //         alert("noice");
-        //         newRound();
-        //     }
-        //     else if (!isWin && isOver) {
-        //         alert("yikes");
-        //         newRound();
-        //     }
-        // }
-
-
-
     };
-
     mining();
-
 });
 
