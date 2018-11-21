@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.4.0/js/all.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Crystal Collector</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://michellemchoe.github.io/unit-4-game/">
+                <div class="pageLogo"><i class="far fa-gem"></i> Crystal Collector</div>
+            </a>
+        </div>
+    </nav>
+
+    <div class="columns is-centered">
+        <div class="column is-one-quarter">
+            <div class="card" id="directions">
+                <header class="card-header">
+                    <p class="card-header-title">
+                        How to Play
+                    </p>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        Each crystal has a hidden value. Select one to add that amount to your mining cart.
+                        <br><br>
+                        Try to collect the requested amount of crystals. But be careful. If you mine more than is
+                        requested, you lose.
+                        <br><br>
+                        Keep in mind the crystals will change their hidden value at the start of every round.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="column is-two-fifths">
+            <div class="columns">
+                <div class="column">
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Crystals Requested: 
+                                <span id="crystalRequested"></span>
+                            </p>
+                        </header>
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Crystals Collected:
+                                <span id="crystalsCollected"></span>
+                            </p>
+                        </header>
+                        <footer class="card-footer">
+                            <a href="#" class="card-footer-item crystal" id="crys1" value=""><img class="crystalImage" src="assets/images/crystal1.png"
+                                    alt="purple crystal"></a>
+                            <a href="#" class="card-footer-item crystal" id="crys2" value=""><img class="crystalImage" src="assets/images/crystal2.png"
+                                    alt="pink crystal"></a>
+                            <a href="#" class="card-footer-item crystal" id="crys3" value=""><img class="crystalImage" src="assets/images/crystal3.png"
+                                    alt="blue crystal"></a>
+                            <a href="#" class="card-footer-item crystal" id="crys4" value=""><img class="crystalImage" src="assets/images/crystal4.png"
+                                    alt="ombre crystal"></a>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <div class="card" id="scoreCount">
+                        <div class="card-content">
+                            <div class="content">
+                                <div class="columns">
+                                    <div class="column">
+                                        <div class="scoreLabel"> Wins: <span id="winCount"></span></div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="scoreLabel">Losses: <span id="lossCount"></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="assets/javascript/game.js"></script>
+</body>
+
+</html>
